@@ -1,0 +1,8 @@
+# Shopify CLI environments — https://shopify.dev/docs/storefronts/themes/tools/cli/environments
+# Usage: shopify theme dev -e development
+#
+# The store URL is not a secret (it is visible to anyone who opens the storefront),
+# so this file is safe to commit to a public repository.
+
+[environments.development]
+store = "roman-pel.myshopify.com"
