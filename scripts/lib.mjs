@@ -98,6 +98,44 @@ export function userErrors(payload, context) {
 
 export const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+/**
+ * Registers translations for a resource, matching `values` keys against the
+ * resource's translatable content (skipping keys it doesn't expose).
+ */
+export async function registerTranslations(resourceId, locale, values, label) {
+  const source = await gql(
+    `query src($id: ID!) {
+      translatableResource(resourceId: $id) {
+        translatableContent { key value digest }
+      }
+    }`,
+    { id: resourceId }
+  );
+  const content = source.translatableResource?.translatableContent ?? [];
+  const translations = [];
+  for (const [key, value] of Object.entries(values)) {
+    const item = content.find((c) => c.key === key);
+    if (!item) continue;
+    translations.push({ locale, key, value, translatableContentDigest: item.digest });
+  }
+  if (!translations.length) {
+    console.log(`  ⚠ ${label}: no translatable keys matched (${Object.keys(values).join(', ')})`);
+    return;
+  }
+  const data = await gql(
+    `mutation register($id: ID!, $translations: [TranslationInput!]!) {
+      translationsRegister(resourceId: $id, translations: $translations) {
+        translations { key locale }
+        userErrors { field message }
+      }
+    }`,
+    { id: resourceId, translations }
+  );
+  if (!userErrors(data.translationsRegister, label)) {
+    console.log(`  ✓ ${label} (${translations.map((t) => t.key).join(', ')})`);
+  }
+}
+
 export async function findByHandle(kind, handle) {
   const data = await gql(
     `query find($query: String!) {

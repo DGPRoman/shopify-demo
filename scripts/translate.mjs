@@ -8,7 +8,7 @@
  * Idempotent: re-registering the same translation is a no-op.
  */
 
-import { gql, userErrors, sleep, findByHandle, requireScopes } from './lib.mjs';
+import { gql, userErrors, sleep, findByHandle, requireScopes, registerTranslations as registerFor } from './lib.mjs';
 import { COLLECTIONS, PRODUCTS, MENU_TITLES_UK } from './seed-data.mjs';
 
 requireScopes(['write_translations', 'write_locales']);
@@ -59,39 +59,8 @@ async function ensureLocale() {
 
 // --- translations ------------------------------------------------------------
 
-async function registerTranslations(resourceId, values, label) {
-  const source = await gql(
-    `query src($id: ID!) {
-      translatableResource(resourceId: $id) {
-        translatableContent { key value digest }
-      }
-    }`,
-    { id: resourceId }
-  );
-  const content = source.translatableResource?.translatableContent ?? [];
-  const translations = [];
-  for (const [key, value] of Object.entries(values)) {
-    const item = content.find((c) => c.key === key);
-    if (!item) continue;
-    translations.push({ locale: LOCALE, key, value, translatableContentDigest: item.digest });
-  }
-  if (!translations.length) {
-    console.log(`  ⚠ ${label}: no translatable keys matched (${Object.keys(values).join(', ')})`);
-    return;
-  }
-  const data = await gql(
-    `mutation register($id: ID!, $translations: [TranslationInput!]!) {
-      translationsRegister(resourceId: $id, translations: $translations) {
-        translations { key locale }
-        userErrors { field message }
-      }
-    }`,
-    { id: resourceId, translations }
-  );
-  if (!userErrors(data.translationsRegister, label)) {
-    console.log(`  ✓ ${label} (${translations.map((t) => t.key).join(', ')})`);
-  }
-}
+const registerTranslations = (resourceId, values, label) =>
+  registerFor(resourceId, LOCALE, values, label);
 
 // --- run ---------------------------------------------------------------------
 
@@ -136,7 +105,9 @@ if (menu) {
   for (const item of menu.items) {
     const uk = MENU_TITLES_UK[item.title];
     if (!uk) continue;
-    await registerTranslations(item.id, { title: uk }, `menu: ${item.title} → ${uk}`);
+    // Menu items are translated as Link resources (same numeric id).
+    const linkId = item.id.replace('/MenuItem/', '/Link/');
+    await registerTranslations(linkId, { title: uk }, `menu: ${item.title} → ${uk}`);
     await sleep(150);
   }
 } else {

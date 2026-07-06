@@ -286,7 +286,7 @@ export const PRODUCTS = [
   },
 ];
 
-/** Main navigation: catalog root + one item per collection. */
+/** Main navigation: catalog root + one item per collection + the blog. */
 export const MAIN_MENU_ITEMS = (collectionIds) => [
   { title: 'Catalog', type: 'HTTP', url: '/collections/all' },
   ...COLLECTIONS.map((c) => ({
@@ -294,6 +294,7 @@ export const MAIN_MENU_ITEMS = (collectionIds) => [
     type: 'COLLECTION',
     resourceId: collectionIds[c.handle],
   })),
+  { title: 'Journal', type: 'HTTP', url: '/blogs/journal' },
 ];
 
 /** Ukrainian titles for the main menu items, keyed by English title. */
@@ -303,4 +304,5 @@ export const MENU_TITLES_UK = {
   Knitwear: 'Трикотаж',
   Essentials: 'Основа',
   Accessories: 'Аксесуари',
+  Journal: 'Журнал',
 };
