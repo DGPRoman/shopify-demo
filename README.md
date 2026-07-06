@@ -1,6 +1,6 @@
-# Roman Pel Theme
+# Ropel
 
-A custom Shopify theme built from scratch on top of Shopify's [Skeleton theme](https://github.com/Shopify/skeleton-theme).
+**Ropel** is a custom Shopify theme built from scratch on top of Shopify's [Skeleton theme](https://github.com/Shopify/skeleton-theme).
 A learning project structured and maintained to production standards: CI checks on every push, secret scanning, and Shopify theme best practices.
 
 ## Prerequisites
