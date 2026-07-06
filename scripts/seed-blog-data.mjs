@@ -318,4 +318,222 @@ export const ARTICLES = [
 <p>Саме таку ми й робимо. Металева пряжка замість пластикових кнопок, козирок, якому можна надати форму руками, і геть нічого на передньому клині. Виявляється, кепці не треба нічого казати, щоб сказати достатньо.</p>`,
     },
   },
+  {
+    handle: 'journal-typography-specimen',
+    title: 'Specimen: Every Element of a Journal Page',
+    tags: ['notes'],
+    publishDate: '2026-07-04T09:00:00Z',
+    image: imageOf('oxford-shirt-standart'),
+    summary:
+      'A working page that exercises everything this journal can typeset: headings, lists, quotations, tables, images and video.',
+    body: `<p>Every publication needs one page that exists only to be looked at. This is ours: a <strong>typographic specimen</strong> that exercises every element the journal can typeset — so that when we adjust the theme, one glance shows whether <em>anything</em> broke. Bookmark it, or read on; it tries to stay useful even as a test.</p>
+<h2>A second-level heading</h2>
+<p>Body text is the baseline everything else is measured against. A paragraph should hold a comfortable measure — roughly sixty to seventy characters — and this one exists mostly to demonstrate it, with an <a href="/collections/all">internal link to the catalog</a> and an external one to <a href="https://en.wikipedia.org/wiki/Oxford_(cloth)">the history of oxford cloth</a>.</p>
+<h3>A third-level heading</h3>
+<p>Third-level headings carry subsections. They should be clearly smaller than their parent, yet unmistakably heavier than body text.</p>
+<h4>A fourth-level heading</h4>
+<p>Rare, but it must not fall apart when it appears. Below it, the humble text styles: <strong>bold for weight</strong>, <em>italic for voice</em>, and inline references such as care codes — <code>30°C</code>, <code>P</code>, <code>⊘</code> — set in a mono face.</p>
+<h2>Lists</h2>
+<p>Unordered, for things without hierarchy:</p>
+<ul>
+<li>Wool releases moisture slowly — give it air.</li>
+<li>Cotton takes dye deeply — expect it to fade honestly.</li>
+<li>Canvas records use — that is the point of it, including:
+<ul>
+<li>darkened handles,</li>
+<li>softened corners,</li>
+<li>a shade no dye house could specify.</li>
+</ul>
+</li>
+</ul>
+<p>Ordered, for things that are a sequence:</p>
+<ol>
+<li>Empty the pockets.</li>
+<li>Brush along the nap.</li>
+<li>Hang on a wide wooden hanger.</li>
+<li>Leave outside the wardrobe for an hour.</li>
+</ol>
+<h2>A quotation</h2>
+<blockquote>
+<p>Fashion passes, style remains.</p>
+<cite>— Coco Chanel</cite>
+</blockquote>
+<h2>A table</h2>
+<p>The size chart for our knitwear, which doubles as a stress test for table styles:</p>
+<table>
+<thead>
+<tr><th>Size</th><th>Chest, cm</th><th>Body length, cm</th><th>Sleeve, cm</th></tr>
+</thead>
+<tbody>
+<tr><td>XS</td><td>96</td><td>64</td><td>60</td></tr>
+<tr><td>S</td><td>102</td><td>66</td><td>61</td></tr>
+<tr><td>M</td><td>108</td><td>68</td><td>62</td></tr>
+<tr><td>L</td><td>114</td><td>70</td><td>63</td></tr>
+<tr><td>XL</td><td>120</td><td>72</td><td>64</td></tr>
+</tbody>
+</table>
+<hr>
+<h2>An image with a caption</h2>
+<figure>
+<img src="${imageOf('turtleneck-druhyi-shar').url}" alt="${imageOf('turtleneck-druhyi-shar').altText}">
+<figcaption>A figure element with a caption underneath — the way every image in this journal should be set.</figcaption>
+</figure>
+<h2>A video</h2>
+<p>And finally, an embedded film — wool production explained by the International Wool Textile Organisation:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ezcnihYoJ7E" title="Wool Production and Processing — IWTO" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><small>If any element on this page looks wrong after a theme change, the change is not done.</small></p>`,
+    uk: {
+      title: 'Специмен: усі елементи сторінки журналу',
+      summary:
+        'Робоча сторінка, що випробовує все, що вміє верстати цей журнал: заголовки, списки, цитати, таблиці, зображення й відео.',
+      body: `<p>Кожному виданню потрібна одна сторінка, яка існує лише для того, щоб на неї дивитися. Ось наша: <strong>типографічний специмен</strong>, що випробовує кожен елемент, який журнал уміє верстати, — щоб після будь-якої зміни теми один погляд показував, чи <em>щось</em> зламалося. Збережіть у закладки або читайте далі: сторінка намагається бути корисною навіть як тест.</p>
+<h2>Заголовок другого рівня</h2>
+<p>Основний текст — це базова лінія, від якої міряється все інше. Абзац має тримати комфортну ширину — приблизно шістдесят-сімдесят знаків — і цей існує здебільшого щоб це продемонструвати, разом із <a href="/collections/all">внутрішнім посиланням на каталог</a> і зовнішнім — на <a href="https://en.wikipedia.org/wiki/Oxford_(cloth)">історію оксфордської тканини</a>.</p>
+<h3>Заголовок третього рівня</h3>
+<p>Заголовки третього рівня несуть підрозділи. Вони мають бути помітно меншими за батьківський, але безпомилково важчими за основний текст.</p>
+<h4>Заголовок четвертого рівня</h4>
+<p>Рідкісний, але він не має розсипатися, коли з'являється. Нижче — скромні текстові стилі: <strong>жирний для ваги</strong>, <em>курсив для голосу</em> та рядкові позначення на кшталт кодів догляду — <code>30°C</code>, <code>P</code>, <code>⊘</code> — набрані моноширинним.</p>
+<h2>Списки</h2>
+<p>Невпорядкований — для речей без ієрархії:</p>
+<ul>
+<li>Вовна віддає вологу повільно — дайте їй повітря.</li>
+<li>Бавовна вбирає фарбу глибоко — чекайте чесного вигорання.</li>
+<li>Канвас записує використання — у цьому його сенс, зокрема:
+<ul>
+<li>потемнілі ручки,</li>
+<li>пом'якшені кути,</li>
+<li>відтінок, якого не пропише жодна фарбувальня.</li>
+</ul>
+</li>
+</ul>
+<p>Впорядкований — для речей, що є послідовністю:</p>
+<ol>
+<li>Звільніть кишені.</li>
+<li>Пройдіться щіткою за ворсом.</li>
+<li>Повісьте на широкі дерев'яні плечики.</li>
+<li>Залиште на годину поза шафою.</li>
+</ol>
+<h2>Цитата</h2>
+<blockquote>
+<p>Мода минає, стиль залишається.</p>
+<cite>— Коко Шанель</cite>
+</blockquote>
+<h2>Таблиця</h2>
+<p>Розмірна сітка нашого трикотажу, яка заразом працює стрес-тестом для стилів таблиць:</p>
+<table>
+<thead>
+<tr><th>Розмір</th><th>Груди, см</th><th>Довжина, см</th><th>Рукав, см</th></tr>
+</thead>
+<tbody>
+<tr><td>XS</td><td>96</td><td>64</td><td>60</td></tr>
+<tr><td>S</td><td>102</td><td>66</td><td>61</td></tr>
+<tr><td>M</td><td>108</td><td>68</td><td>62</td></tr>
+<tr><td>L</td><td>114</td><td>70</td><td>63</td></tr>
+<tr><td>XL</td><td>120</td><td>72</td><td>64</td></tr>
+</tbody>
+</table>
+<hr>
+<h2>Зображення з підписом</h2>
+<figure>
+<img src="${imageOf('turtleneck-druhyi-shar').url}" alt="${imageOf('turtleneck-druhyi-shar').altText}">
+<figcaption>Елемент figure з підписом унизу — так має бути зверстане кожне зображення в цьому журналі.</figcaption>
+</figure>
+<h2>Відео</h2>
+<p>І нарешті вбудований фільм — виробництво вовни в поясненні Міжнародної організації вовняного текстилю:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ezcnihYoJ7E" title="Wool Production and Processing — IWTO" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><small>Якщо після зміни теми будь-який елемент цієї сторінки виглядає неправильно — зміна не завершена.</small></p>`,
+    },
+  },
+  {
+    handle: 'lookbook-three-ways-to-layer',
+    title: 'Lookbook: Three Ways to Layer This Autumn',
+    tags: ['lookbook', 'wardrobe'],
+    publishDate: '2026-07-05T09:00:00Z',
+    image: imageOf('wool-coat-forma-01'),
+    summary:
+      'Three combinations from the current catalog, photographed plainly and explained piece by piece.',
+    body: `<p>A lookbook in our reading is not a mood board — it is instructions. Three combinations from the current catalog, photographed plainly and explained piece by piece, with every item linked so the recipe can be repeated.</p>
+<h2>Look 1 — The commute</h2>
+<figure>
+<img src="${imageOf('wool-coat-forma-01').url}" alt="${imageOf('wool-coat-forma-01').altText}">
+<figcaption>«Form 01» coat in camel over a tonal second layer.</figcaption>
+</figure>
+<p>The <a href="/products/wool-coat-forma-01">«Form 01» wool coat</a> over the <a href="/products/turtleneck-druhyi-shar">«Second Layer» turtleneck</a>, both in one temperature of colour. The coat carries the structure; everything under it stays quiet. Trousers: <a href="/products/wide-trousers-krii-02">«Cut 02»</a> in black, quarter break.</p>
+<h2>Look 2 — The in-between season</h2>
+<figure>
+<img src="${imageOf('overshirt-robocha').url}" alt="${imageOf('overshirt-robocha').altText}">
+<figcaption>The «Work» overshirt worn open, doing a jacket's job.</figcaption>
+</figure>
+<p>The <a href="/products/overshirt-robocha">«Work» overshirt</a> open over the <a href="/products/heavy-tee-bazys">«Basis» heavy tee</a> — the roughest layer on top, exactly as <a href="/blogs/journal/overshirt-third-layer">the overshirt article</a> prescribes. When the wind picks up, the <a href="/products/wool-scarf-smuha">«Stripe» scarf</a> adds warmth without adding a silhouette.</p>
+<h2>Look 3 — The errand run</h2>
+<figure>
+<img src="${imageOf('canvas-bag-polotno').url}" alt="${imageOf('canvas-bag-polotno').altText}">
+<figcaption>Undyed canvas against grey melange — texture doing the work of colour.</figcaption>
+</figure>
+<p>The <a href="/products/merino-sweater-okruhlyi">«Round» sweater</a> in grey melange, the <a href="/products/canvas-bag-polotno">«Canvas» tote</a>, and nothing else asking for attention. This is the palette principle from <a href="/blogs/journal/palette-without-accent">«A Palette Without an Accent Colour»</a> applied literally.</p>
+<p>All three looks draw from the same five shades — proof that <a href="/collections/all">twenty quiet pieces</a> combine further than forty loud ones.</p>`,
+    uk: {
+      title: 'Лукбук: три способи вдягнути шари цієї осені',
+      summary:
+        'Три комбінації з поточного каталогу, зняті просто і пояснені річ за річчю.',
+      body: `<p>Лукбук у нашому прочитанні — не дошка настрою, а інструкція. Три комбінації з поточного каталогу, зняті просто і пояснені річ за річчю, з посиланням на кожну позицію, щоб рецепт можна було повторити.</p>
+<h2>Образ 1 — Дорога на роботу</h2>
+<figure>
+<img src="${imageOf('wool-coat-forma-01').url}" alt="${imageOf('wool-coat-forma-01').altText}">
+<figcaption>Пальто «Форма 01» у кемелі поверх тонального другого шару.</figcaption>
+</figure>
+<p><a href="/products/wool-coat-forma-01">Вовняне пальто «Форма 01»</a> поверх <a href="/products/turtleneck-druhyi-shar">гольфа «Другий шар»</a>, обидва в одній температурі кольору. Пальто несе структуру; все під ним мовчить. Штани: <a href="/products/wide-trousers-krii-02">«Крій 02»</a> у чорному, чверть зламу.</p>
+<h2>Образ 2 — Міжсезоння</h2>
+<figure>
+<img src="${imageOf('overshirt-robocha').url}" alt="${imageOf('overshirt-robocha').altText}">
+<figcaption>Куртка-сорочка «Робоча» розстебнута — виконує роботу куртки.</figcaption>
+</figure>
+<p><a href="/products/overshirt-robocha">Куртка-сорочка «Робоча»</a> розстебнута поверх <a href="/products/heavy-tee-bazys">щільної футболки «Базис»</a> — найгрубіший шар зверху, точно як приписує <a href="/blogs/journal/overshirt-third-layer">стаття про куртку-сорочку</a>. Коли здіймається вітер, <a href="/products/wool-scarf-smuha">шарф «Смуга»</a> додає тепла, не додаючи силуету.</p>
+<h2>Образ 3 — У справах</h2>
+<figure>
+<img src="${imageOf('canvas-bag-polotno').url}" alt="${imageOf('canvas-bag-polotno').altText}">
+<figcaption>Нефарбований канвас проти сірого меланжу — фактура робить роботу кольору.</figcaption>
+</figure>
+<p><a href="/products/merino-sweater-okruhlyi">Светр «Округлий»</a> у сірому меланжі, <a href="/products/canvas-bag-polotno">сумка «Полотно»</a> — і більше ніщо не просить уваги. Це принцип палітри зі статті <a href="/blogs/journal/palette-without-accent">«Палітра без акцентного кольору»</a>, застосований буквально.</p>
+<p>Усі три образи зібрані з тих самих п'яти відтінків — доказ, що <a href="/collections/all">двадцять тихих речей</a> комбінуються далі, ніж сорок гучних.</p>`,
+    },
+  },
+  {
+    handle: 'watch-how-wool-becomes-cloth',
+    title: 'Watch: How Wool Becomes Cloth',
+    tags: ['fabric', 'wool'],
+    publishDate: '2026-07-06T09:00:00Z',
+    image: imageOf('wool-scarf-smuha'),
+    summary:
+      'Twenty minutes of footage explain wool better than twenty paragraphs. A film by The Woolmark Company, annotated.',
+    body: `<p>Some things about wool are easier shown than written. How a fleece is graded by hand in seconds. Why scoured wool looks nothing like the sheep it came from. What «combing» actually removes. This film by The Woolmark Company follows merino from an Australian paddock to finished cloth, and it is worth every minute.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YwRbyTCqOQY" title="How Wool Is Made: From Farm to Fashion — Woolmark" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>What to watch for</h2>
+<ol>
+<li><strong>Shearing</strong> — a skilled shearer takes a fleece in one piece, in under three minutes, without a single nick.</li>
+<li><strong>Classing</strong> — the fleece is sorted by fineness on the spot; this is where the microns from <a href="/blogs/journal/merino-no-itch">our merino article</a> are decided.</li>
+<li><strong>Scouring and carding</strong> — grease, dust and vegetable matter out; parallel fibres in.</li>
+<li><strong>Combing</strong> — the short fibres are removed, and what remains is the smooth «top» that fine knitwear starts from.</li>
+<li><strong>Spinning and knitting</strong> — where yarn twist decides whether a sweater will pill in a month or a decade.</li>
+</ol>
+<p>For the industrial view at scale, the International Wool Textile Organisation keeps <a href="https://www.iwto.org">a library of production data</a>, and Woolmark's own <a href="https://www.woolmark.com/industry/product-development/wool-processing/">processing guide</a> goes a step deeper into each stage.</p>
+<p>Then put the theory on: everything in <a href="/collections/knitwear">our knitwear collection</a> starts exactly where this film does.</p>`,
+    uk: {
+      title: 'Дивитись: як вовна стає тканиною',
+      summary:
+        'Двадцять хвилин відео пояснюють вовну краще за двадцять абзаців. Фільм The Woolmark Company з нашими нотатками.',
+      body: `<p>Деякі речі про вовну легше показати, ніж написати. Як руно за секунди сортують руками. Чому промита вовна зовсім не схожа на вівцю, з якої вона щойно знята. Що насправді прибирає «гребенечесання». Цей фільм The Woolmark Company простежує меринос від австралійського пасовища до готової тканини — і вартий кожної хвилини.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YwRbyTCqOQY" title="How Wool Is Made: From Farm to Fashion — Woolmark" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>На що дивитися</h2>
+<ol>
+<li><strong>Стрижка</strong> — вправний стригаль знімає руно одним шматком, менш ніж за три хвилини, без жодного порізу.</li>
+<li><strong>Класування</strong> — руно сортують за тонкістю на місці; саме тут вирішуються мікрони з <a href="/blogs/journal/merino-no-itch">нашої статті про меринос</a>.</li>
+<li><strong>Промивання і кардочесання</strong> — жир, пил і рослинні рештки геть; паралельні волокна — всередину.</li>
+<li><strong>Гребенечесання</strong> — короткі волокна видаляються, і залишається гладкий «топс», з якого починається тонкий трикотаж.</li>
+<li><strong>Прядіння і в'язання</strong> — тут крутка пряжі вирішує, скатається светр за місяць чи за десятиліття.</li>
+</ol>
+<p>Для індустріального погляду в масштабі Міжнародна організація вовняного текстилю тримає <a href="https://www.iwto.org">бібліотеку виробничих даних</a>, а власний <a href="https://www.woolmark.com/industry/product-development/wool-processing/">гід Woolmark з переробки</a> заглиблюється в кожен етап.</p>
+<p>А тоді одягніть теорію: усе в <a href="/collections/knitwear">нашій колекції трикотажу</a> починається саме там, де цей фільм.</p>`,
+    },
+  },
 ];
